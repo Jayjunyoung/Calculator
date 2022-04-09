@@ -1,0 +1,58 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.main > .input {
+    border: 1px solid black;
+    width: 400px;
+    height: 80px;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.input > #show {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: right;
+    font-size: 20px;
+    border: 0;
+}
+
+
+#container {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container > .main {
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.main > .button { /* button div */
+    display: flex;
+    flex-direction: row;
+}
+
+.button button {
+    width: 100px;
+    height: 50px;
+    background-color: darkgray;
+    color:white;
+    border: 1.5px solid;
+    cursor: pointer;
+}
+
+.button button.allclear {
+    background-color: salmon;
+}
