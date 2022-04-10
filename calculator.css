@@ -7,10 +7,9 @@ body {
     border: 1px solid black;
     width: 400px;
     height: 80px;
-    justify-content: center;
     border-radius: 5px;
     padding: 5px;
-    box-sizing: border-box;
+    box-sizing: border-box; /*넘치지 않도록*/
 }
 
 .input > #show {
@@ -36,12 +35,11 @@ body {
     margin: 10px auto;
     padding: 10px;
     position: relative;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .main > .button { /* button div */
     display: flex;
-    flex-direction: row;
 }
 
 .button button {

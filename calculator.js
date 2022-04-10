@@ -21,10 +21,10 @@ class Calculator {
         //숫자가 들어간걸 그 #show 즉 input값에 넣어주는것
     }
     appendOperator(operator) {
-        if(this.operatorCheck) return false; //true일때 false를 리턴해
+        if(this.operatorCheck) return false; //true일때 false를 리턴해 즉 연산자 두번입력X
         if(this.equalsCheck) this.equalsCheck = false;
         //ex 30+2
-        this.displayContent += operator;
+        this.displayContent += operator;//operatorcheck가 false일때만 연산자가 적용
         return this.operatorCheck = true; //true여야 updateDisplay실행되는것
     }//2번째누를땐 true이므로 적용이 안될것
     allclear() {
@@ -33,7 +33,7 @@ class Calculator {
         this.operatorCheck = true;
     }
     compute() { //계산식 함수를 쓰는것 ex 8+5=13을 해서 계산해준다
-        if(this.operatorCheck) return; //true이면 함수를 빠져나와
+        if(this.operatorCheck) return; //true이면 함수를 빠져나와 즉 6* 하고 = 누르면 에러 안뜸
         this.displayContent = eval(this.displayContent);
         return this.equalsCheck = true; 
         //true를 리턴하면 다시 숫자를 넣을때 이전꺼는 없어지고 숫자만대입
