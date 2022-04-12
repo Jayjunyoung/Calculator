@@ -14,7 +14,7 @@ class Calculator {
         else { //equalsCheck가 false일때 실행
             this.displayContent += number;//기존숫자에 새로운숫자가 추가
         }
-        this.operatorCheck = false;
+        this.operatorCheck = false; //숫자가 넣어지면 연산자를 넣기위해 false로 설정
     } 
     updateDisplay() { //위에 숫자를 입력
         this.displayElement.value  = this.displayContent;
@@ -30,7 +30,7 @@ class Calculator {
     allclear() {
         this.displayElement.value = 0;
         this.displayContent = '';
-        this.operatorCheck = true;
+        this.operatorCheck = true; //올 초기화 하고 연산자를 못넣도록 함
     }
     compute() { //계산식 함수를 쓰는것 ex 8+5=13을 해서 계산해준다
         if(this.operatorCheck) return; //true이면 함수를 빠져나와 즉 6* 하고 = 누르면 에러 안뜸
@@ -44,7 +44,7 @@ class Calculator {
     clear() { //뒤에서 부터 빼오는 slice개념 사용
         //그냥  slice를 쓰면 배열로 되기때문에 
         //toString()함수를 통해 문자열로 반환후 뒤에서 빼버려
-        this.operatorCheck = true;
+        this.operatorCheck = true; //clear 부분누르고 연산자먼저 못넣게 ture로 설정
         this.displayContent = this.displayContent.toString().slice(0, -1);   
     }
     square() {
